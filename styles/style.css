@@ -5,7 +5,6 @@
   --redMana: #ed4c5c;
 }
 html {
-  scroll-behavior: auto;
 }
 
 body {
@@ -74,11 +73,10 @@ body {
   font-size: 14px;
   line-height: 17px;
   white-space: nowrap;
-  transition: opacity, font-size 0.4s;
+  transition: opacity 0.4s;
 }
 .menu__link:hover {
   opacity: 0.7;
-  font-size: larger;
 }
 
 .btn-login {
@@ -114,7 +112,7 @@ body {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-.cloud-pay__inner p {
+.cloud-pay__inner-info {
   max-width: 540px;
   margin: 40px 0;
 }
@@ -127,6 +125,7 @@ body {
   border-radius: 6px;
   font-weight: 600;
   line-height: 17px;
+  font-size: 14px;
   text-transform: uppercase;
   transition: color, background, border-color 0.4s;
 }
@@ -152,19 +151,20 @@ body {
   line-height: 43px;
   padding: 5px 0;
 }
-.management__info p {
+.management__info-post {
   margin: 45px 0 20px;
 }
 
-.management-more span {
-  color: var(--redMana);
-  padding: 5px 0 5px;
-  transition: color, font-size 0.4s;
+.management-more {
+  padding: 5px 0;
 }
-
-.management-more:hover {
+.management-more-inf {
+  color: var(--redMana);
+  transition: all 0.5s;
+}
+.management-more-inf:hover {
   color: #6b0b14;
-  font-size: larger;
+  text-decoration: underline;
 }
 .management__media {
   width: 445px;
@@ -185,7 +185,7 @@ body {
   text-align: center;
   padding-bottom: 100px;
 }
-.container__features h3 {
+.features-head {
   font-weight: 600;
   font-size: 36px;
   line-height: 43px;
@@ -239,13 +239,13 @@ body {
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
-.feature__info h4 {
+.feature__info-head {
   margin: 20px 12px;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
 }
-.feature__info p {
+.feature__info-post {
   margin: 0 16px;
   margin-bottom: 20px;
 }
@@ -257,7 +257,6 @@ body {
 }
 .feature__info-read span:hover {
   color: #6b0b14;
-  font-size: larger;
 }
 /* Technology */
 
@@ -266,7 +265,7 @@ body {
   margin-top: 65px;
 }
 
-.container__technology h3 {
+.technology-head {
   font-weight: 600;
   font-size: 36px;
   line-height: 43px;
@@ -290,9 +289,7 @@ body {
   font-size: 12px;
   font-weight: 400;
 }
-/* .techno:not(:last-child) {
-  margin-right: 30px;
-} */
+
 .techno-numero {
   font-weight: 700;
   font-size: 100px;
@@ -300,14 +297,14 @@ body {
   color: rgba(16, 16, 16, 0.08);
   margin-bottom: 20px;
 }
-.techno__info h4 {
+.techno__info-head {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
   color: var(--basic);
 }
-.techno__info p {
+.techno__info-post {
   padding: 0 30px;
 }
 .techno__media {
@@ -337,7 +334,7 @@ body {
   max-width: 445px;
   margin-right: 125px;
 }
-.focus__info p {
+.focus__info-post {
   margin-top: 25px;
 }
 .focused-headline {
@@ -461,7 +458,7 @@ body {
   grid-template-rows: 1fr auto;
   gap: 30px;
 }
-.footer-block h4 {
+.footer-block-head {
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
@@ -560,7 +557,7 @@ body {
     font-size: 26px;
     line-height: 32px;
   }
-  .management__info p {
+  .management__info-post {
     margin: 20px 0;
   }
   .feature__inner {
@@ -581,7 +578,7 @@ body {
     font-size: 26px;
     line-height: 32px;
   }
-  .focus__info p {
+  .focus__info-post {
     margin: 20px 0;
   }
   .focus__info {
@@ -706,7 +703,7 @@ body {
     font-size: 18px;
     max-width: 400px;
   }
-  .cloud-pay__inner p {
+  .cloud-pay__inner-info {
     margin: 20px 0;
   }
   .cloud-pay__btn {
@@ -719,7 +716,7 @@ body {
     margin-right: 0;
     margin-top: 20px;
   }
-  .container__features h3 {
+  .features-head {
     font-size: 26px;
     margin: 30px 0;
   }
@@ -843,7 +840,7 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
   }
-  .container__technology h3 {
+  .technology-head {
     font-size: 26px;
     margin: 30px 0;
   }
@@ -884,9 +881,25 @@ body {
   }
 }
 @media (max-width: 540px) {
+  .header {
+    position: relative;
+  }
+  .cloud-pay__inner {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  .cloud-pay__inner-info {
+    padding: 0 10px;
+  }
   .form-contact {
     max-width: 350px;
     min-width: 200px;
     margin: 0 10px;
+  }
+  .logo {
+    margin-top: 55px;
   }
 }
