@@ -761,7 +761,7 @@ body {
     width: 26px;
     height: 26px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 2000;
     margin: 20px 30px;
   }
 
@@ -835,6 +835,7 @@ body {
   #menu-toggle:checked ~ .burger-menu {
     visibility: visible;
     left: 90px;
+    z-index: 50;
   }
   .burger-menu:active::after {
     visibility: hidden;
